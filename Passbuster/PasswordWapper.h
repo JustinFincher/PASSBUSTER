@@ -11,4 +11,9 @@
 @interface PasswordWapper : NSObject
 - (NSString *)getDecryptedPasswordFromCryptedPassword:(NSString *)Password;
 - (NSString *)setCryptedPasswordFromDecryptedPassword:(NSString *)Password;
+
+- (NSString *)getDecryptedPasswordFromCryptedPassword:(NSString *)Password
+                                    WithNewMD5MainPWD:(NSString *)NewMainPWD;
+- (NSString *)setCryptedPasswordFromDecryptedPassword:(NSString *)Password
+                                    WithNewMD5MainPWD:(NSString *)NewMainPWD;
 @end

@@ -16,6 +16,7 @@
 #import "CocoaSecurity.h"
 #import "Password.h"
 #import "PasswordClass.h"
+#import "PasswordWapper.h"
 
 @implementation FMDBAPI
 @synthesize dbPath;
@@ -302,6 +303,80 @@
     else
     {
         NSLog(@"ERROR find database when self destroy");
+        return NO;
+    }
+
+}
+
+-(BOOL)DatabaseMigratedWithNewPassword:(NSString *)NewPWD
+{
+    NSString * doc = PATH_OF_DOCUMENT;
+    NSString * path = [doc stringByAppendingPathComponent:@"user.sqlite"];
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:path] == YES)
+    {
+        
+        FMDatabase *db = [FMDatabase databaseWithPath:path];
+        db.logsErrors = YES;
+        if ([db open])
+        {
+            FMResultSet *AllSessions = [db executeQuery:@"SELECT * FROM AccountSession"];
+            if (AllSessions)
+            {
+                
+                NSString *MainPassword = NewPWD;
+                CocoaSecurityResult *MainPassword_md5 = [CocoaSecurity md5:MainPassword];
+                
+                
+                NSLog(@"SUCCESS get AllSessions");
+                
+                while ([AllSessions next])
+                {
+                    NSLog(@"ONE SESSION");
+                    NSString *SessionIndex = [AllSessions stringForColumnIndex:0];
+                    NSString *PasswordString = [AllSessions stringForColumnIndex:3];
+                    NSString *RawOldPassword = [[[PasswordWapper alloc] init] getDecryptedPasswordFromCryptedPassword:PasswordString];
+                    NSString *NewPassword = [[[PasswordWapper alloc] init] setCryptedPasswordFromDecryptedPassword:RawOldPassword WithNewMD5MainPWD:MainPassword_md5.hex];
+                    
+                    NSLog(@"-----------------------------------");
+                    NSLog(@"PasswordString ＝ %@",PasswordString);
+                    NSLog(@"RawOldPassword ＝ %@",RawOldPassword);
+                    NSLog(@"NewPassword ＝ %@",NewPassword);
+                    NSLog(@"-----------------------------------");
+                    
+                    
+                    NSString * ChangePasswordScript = @"update AccountSession SET Password = ? WHERE ID = ?";
+                    
+                    BOOL ChangePasswordScriptResult = [db executeUpdate:ChangePasswordScript,NewPassword,[NSNumber numberWithInt:[SessionIndex intValue]]];
+                    if (ChangePasswordScriptResult) {
+                        NSLog(@"SUUCESS change password  # %@",SessionIndex);
+                        NSLog(@"PasswordString %@ ----> NewPassword %@",PasswordString,NewPassword);
+                    } else {
+                        NSLog(@"ERROR change password # %@ ",SessionIndex);
+                    }
+                }
+
+                [AllSessions close];
+                return YES;
+            }
+            
+            else
+            {
+                [db close];
+                NSLog(@"ERROR get AllSessions");
+                return NO;
+            }
+            
+        }
+        else
+        {
+            NSLog(@"error when open db");
+            return NO;
+        }
+        
+    }
+    else
+    {
         return NO;
     }
 

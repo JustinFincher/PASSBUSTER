@@ -8,15 +8,58 @@
 
 #import "SettingsTableViewController.h"
 #import "FMDBAPI.h"
+#import "CocoaSecurity.h"
 
-@interface SettingsTableViewController ()
+@interface SettingsTableViewController ()<UIAlertViewDelegate>
 
 @end
 
 @implementation SettingsTableViewController
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    //Code.....
+    if ([alertView.title  isEqual: @"NEW PASS!"])
+    {
+        if (buttonIndex == 1)
+        {
+            NSLog(@"WILL CHANGE MAIN PWD");
+            UITextField *textField = [alertView textFieldAtIndex:0];
+            
+            
+            NSString *MainPassword = textField.text;
+            NSString *MainPassword_Trimmed = [MainPassword stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            //全部解密重新加密
+            if ([[[FMDBAPI alloc] init]DatabaseMigratedWithNewPassword:MainPassword_Trimmed])
+            {
+                //修改系统主密码
+                CocoaSecurityResult *MainPassword_md5 = [CocoaSecurity md5:MainPassword_Trimmed];
+                NSLog(@"MainPsssword MD5 = %@",MainPassword_md5.hex);
+                if ([[[FMDBAPI alloc] init]ChangeAccountSessionWithMainPassword:MainPassword_md5.hex])
+                {
+                    NSLog(@"SettingsTableViewController : SetPassword Complete.");
+                }
+            };
+
+        }
+    }
+}
+
+
 - (IBAction)ResetPassword:(id)sender
 {
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:@"NEW PASS!"
+                              message:@"Please enter your new pass word:"
+                              delegate:self
+                              cancelButtonTitle:@"Cancel"
+                              otherButtonTitles:@"Ok", nil];
+    [alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    /* Display a numerical keypad for this text field */
+    UITextField *textField = [alertView textFieldAtIndex:0];
+    textField.secureTextEntry = YES;
     
+    [alertView show];
 }
 - (IBAction)DestroyDatabase:(id)sender
 {

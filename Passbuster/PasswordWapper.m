@@ -42,5 +42,29 @@
     return aes256.base64;
 }
 
+- (NSString *)getDecryptedPasswordFromCryptedPassword:(NSString *)Password
+                                           WithNewMD5MainPWD:(NSString *)NewMainPWD
+{
+    
+    CocoaSecurityResult *aes256Decrypt = [CocoaSecurity aesDecryptWithBase64:Password
+                                                                      hexKey:NewMainPWD
+                                                                       hexIv:NewMainPWD];
+    
+    
+    return aes256Decrypt.utf8String;
+}
+
+- (NSString *)setCryptedPasswordFromDecryptedPassword:(NSString *)Password
+                                       WithNewMD5MainPWD:(NSString *)NewMainPWD
+{
+    
+    CocoaSecurityResult *aes256 = [CocoaSecurity aesEncrypt:Password
+                                                     hexKey:NewMainPWD
+                                                      hexIv:NewMainPWD];
+    
+    
+    return aes256.base64;
+}
+
 
 @end

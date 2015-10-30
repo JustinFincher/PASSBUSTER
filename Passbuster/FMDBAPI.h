@@ -25,4 +25,5 @@
 - (BOOL)RemoveAccountSessionWithIndex:(NSNumber *)Index;
 
 - (BOOL)SelfDestroy;
+-(BOOL)DatabaseMigratedWithNewPassword:(NSString *)NewPWD;
 @end
