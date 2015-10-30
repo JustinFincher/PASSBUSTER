@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMDB.h"
+#import "PasswordClass.h"
 
 @interface FMDBAPI : NSObject
 
@@ -14,8 +16,13 @@
 
 - (void)LaunchCheck;
 - (BOOL)InsertAccountSessionWithUsername:(NSString *)Username
-                           WithPassword:(NSString *)Password;
+                            WithPassword:(NSString *)Password
+                             WithCompany:(NSString *)Company;
 - (BOOL)ChangeAccountSessionWithMainPassword:(NSString *)MainPassword;
 - (BOOL)ChangeAppSettingsWithIsFirstOpen:(NSNumber *)isFirstOpen;
+- (NSString *)getMainPasswordFromFMDB;
 
+- (BOOL)RemoveAccountSessionWithIndex:(NSNumber *)Index;
+
+- (BOOL)SelfDestroy;
 @end

@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface AddSessionViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *CompanyTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *UsernameTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordTextfield;
+
+
+@property (weak, nonatomic) NSNumber *NumberID;
+
 
 @end

@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Passbuster.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>387D792B3B0BE8570D978F78791C2053</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>55DBDD8B7D446F1D618F303A9FB53209</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5B205F50A9EF0B3FE80E849510A05096</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8CB79776B217A5230252D23CA6C4B6BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F74D9EA91F4C43190670066BAC37D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>

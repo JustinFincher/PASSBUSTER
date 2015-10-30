@@ -1,14 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016+++36F6AE8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "77EAED3E370B253AC9FF8E180C7F9612AC758016" : 0
+    "77EAED3E370B253AC9FF8E180C7F9612AC758016+++0261CCA" : 0,
+    "77EAED3E370B253AC9FF8E180C7F9612AC758016+++36F6AE8" : 0,
+    "77EAED3E370B253AC9FF8E180C7F9612AC758016+++C58D6E8" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4930C503-CEF2-4CA9-9386-D27A55A15608",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "77EAED3E370B253AC9FF8E180C7F9612AC758016" : ""
+    "77EAED3E370B253AC9FF8E180C7F9612AC758016+++0261CCA" : "",
+    "77EAED3E370B253AC9FF8E180C7F9612AC758016+++36F6AE8" : "Passbuster\/",
+    "77EAED3E370B253AC9FF8E180C7F9612AC758016+++C58D6E8" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Passbuster",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -17,12 +21,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JustinFincher\/PASSBUSTER.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016+++0261CCA"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JustinFincher\/PASSBUSTER",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016+++36F6AE8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JustinFincher\/PASSBUSTER",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77EAED3E370B253AC9FF8E180C7F9612AC758016+++C58D6E8"
     }
   ]
 }

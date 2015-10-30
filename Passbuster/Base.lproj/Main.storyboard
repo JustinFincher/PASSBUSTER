@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tabbar-->
@@ -39,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9U3-yj-Yx1" id="Kc1-0P-wvg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -57,33 +58,85 @@
             </objects>
             <point key="canvasLocation" x="1556" y="-361"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Settings-->
         <scene sceneID="JWX-Xy-WJZ">
             <objects>
-                <tableViewController id="T6Z-PH-2rk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JH3-f3-vJF">
+                <tableViewController storyboardIdentifier="SettingsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T6Z-PH-2rk" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="JH3-f3-vJF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IzF-WF-zWd">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IzF-WF-zWd" id="vd4-Al-oXd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Reset password" id="fwd-7P-Y79">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IzF-WF-zWd">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IzF-WF-zWd" id="vd4-Al-oXd">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-Ic-fsu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                    <animations/>
+                                                    <state key="normal" title="Reset Password"/>
+                                                    <connections>
+                                                        <action selector="ResetPassword:" destination="T6Z-PH-2rk" eventType="touchUpInside" id="LYM-s5-aPp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="L2f-Ic-fsu" firstAttribute="top" secondItem="vd4-Al-oXd" secondAttribute="topMargin" constant="-8" id="8ui-KX-rSe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L2f-Ic-fsu" secondAttribute="bottom" constant="-8" id="P7Y-IV-s9D"/>
+                                                <constraint firstItem="L2f-Ic-fsu" firstAttribute="leading" secondItem="vd4-Al-oXd" secondAttribute="leadingMargin" constant="-8" id="h1z-76-GNo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L2f-Ic-fsu" secondAttribute="trailing" constant="-8" id="ntM-DG-tch"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Destroy Database" id="XPK-1r-L5N">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="v39-K6-RWb">
+                                        <rect key="frame" x="0.0" y="208" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v39-K6-RWb" id="xdY-PD-sat">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3j-Rh-USk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                    <animations/>
+                                                    <state key="normal" title="Destroy Database">
+                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="DestroyDatabase:" destination="T6Z-PH-2rk" eventType="touchUpInside" id="Cim-HK-WLI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L3j-Rh-USk" secondAttribute="trailing" constant="-8" id="5dJ-Ua-dOd"/>
+                                                <constraint firstItem="L3j-Rh-USk" firstAttribute="leading" secondItem="xdY-PD-sat" secondAttribute="leadingMargin" constant="-8" id="9Lc-yu-Ke7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L3j-Rh-USk" secondAttribute="bottom" constant="-8.5" id="oBj-UA-1bq"/>
+                                                <constraint firstItem="L3j-Rh-USk" firstAttribute="top" secondItem="xdY-PD-sat" secondAttribute="topMargin" constant="-8" id="ueO-5K-HIE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="T6Z-PH-2rk" id="6K4-Q5-mif"/>
                             <outlet property="delegate" destination="T6Z-PH-2rk" id="aLy-7y-4Lw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="sG2-nV-Tgr"/>
+                    <navigationItem key="navigationItem" title="Settings" id="sG2-nV-Tgr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgk-uE-VKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,12 +145,16 @@
         <!--Settings-->
         <scene sceneID="HeO-ib-cYS">
             <objects>
-                <navigationController id="L2z-JR-8BK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingsViewerNaviController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L2z-JR-8BK" customClass="SettingsViewerNaviController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="MKZ-7a-PNp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S8p-h2-0KZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="T6Z-PH-2rk" kind="relationship" relationship="rootViewController" id="TmY-yJ-mkj"/>

@@ -7,9 +7,11 @@
 //
 
 #import "PasswordTableViewCell.h"
-
+#import "AddSessionViewController.h"
+#import "PasswordWapper.h"
 @implementation PasswordTableViewCell
 @synthesize BackgroundViw,PasswordLabel,UsernameLabel,CompanyLabel;
+@synthesize PasswordString,isVisble;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -23,13 +25,46 @@
     BackgroundViw.layer.masksToBounds = NO;
     
     self.backgroundColor = [UIColor clearColor];
+    isVisble = [NSNumber numberWithInt:0];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    
+    if (self.selected == selected) return;
+    
+    
     [super setSelected:selected animated:animated];
+    
+    if (selected == YES)
+    {
 
-    // Configure the view for the selected state
+    }
 }
 
+- (UIViewController *)viewController {
+    /// Finds the view's view controller.
+    
+    // Traverse responder chain. Return first found view controller, which will be the view's view controller.
+    UIResponder *responder = self;
+    while ((responder = [responder nextResponder]))
+        if ([responder isKindOfClass: [UIViewController class]])
+            return (UIViewController *)responder;
+    
+    // If the view controller isn't found, return nil.
+    return nil;
+}
 
+- (IBAction)WholeButtonPressed:(id)sender
+{
+    if (isVisble == [NSNumber numberWithInt:1])
+    {
+        isVisble = [NSNumber numberWithInt:0];
+        self.PasswordLabel.text = @"****************";
+    }
+    else if (isVisble == [NSNumber numberWithInt:0])
+    {
+        isVisble = [NSNumber numberWithInt:1];
+        self.PasswordLabel.text = [[[PasswordWapper alloc] init] getDecryptedPasswordFromCryptedPassword:PasswordString];
+    }
+}
 @end

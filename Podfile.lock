@@ -9,6 +9,7 @@ PODS:
   - JazzHands (2.0.2)
   - KVNProgress (2.2.1)
   - MJExtension (2.5.15)
+  - MJRefresh (2.4.12)
 
 DEPENDENCIES:
   - CocoaSecurity
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - JazzHands (<= 2.0.2)
   - KVNProgress
   - MJExtension
+  - MJRefresh
 
 SPEC CHECKSUMS:
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
@@ -25,5 +27,6 @@ SPEC CHECKSUMS:
   JazzHands: 088a3949e539480b07ba6ae4877da935efcc061b
   KVNProgress: 7001d2d16a2755cee5599e8e485befe056f2197b
   MJExtension: 76967711f6ac61b1dc60ea5e148f88e12cfc8427
+  MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
 
 COCOAPODS: 0.39.0

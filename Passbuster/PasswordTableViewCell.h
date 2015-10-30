@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *CompanyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *UsernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PasswordLabel;
+@property (strong, nonatomic) NSString *PasswordString;
+@property (strong, nonatomic) NSNumber *isVisble;
+@property (weak, nonatomic) IBOutlet UIButton *WholeButton;
+- (IBAction)WholeButtonPressed:(id)sender;
 
 
 @end

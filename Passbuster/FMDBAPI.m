@@ -10,10 +10,12 @@
 #define PATH_OF_TEMP        NSTemporaryDirectory()
 #define PATH_OF_DOCUMENT    [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
-#import "AppDelegate.h"
 #import "FMDBAPI.h"
 #import "FMDB.h"
 #import "IntroAnimator.h"
+#import "CocoaSecurity.h"
+#import "Password.h"
+#import "PasswordClass.h"
 
 @implementation FMDBAPI
 @synthesize dbPath;
@@ -205,10 +207,103 @@
 }
 
 
+- (NSString *)getMainPasswordFromFMDB
+{
+    NSString * doc = PATH_OF_DOCUMENT;
+    NSString * path = [doc stringByAppendingPathComponent:@"user.sqlite"];
+    self.dbPath = path;
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:self.dbPath] == YES)
+    {
+        
+        FMDatabase *db = [FMDatabase databaseWithPath:self.dbPath];
+        if ([db open])
+        {
+            NSString *MainPassword = [db stringForQuery:@"SELECT MainPassword FROM AppSettings WHERE id = 1"];
+            NSLog(@"%@",MainPassword);
+            [db close];
+            return MainPassword;
+        }
+        else
+        {
+            NSLog(@"error when open db");
+            return nil;
+        }
+        
+    }else
+    {
+        return nil;
+    }
 
+}
 
+- (BOOL)RemoveAccountSessionWithIndex:(NSNumber *)Index
+{
+    NSString * doc = PATH_OF_DOCUMENT;
+    NSString * path = [doc stringByAppendingPathComponent:@"user.sqlite"];
+    self.dbPath = path;
+    
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:self.dbPath] == YES)
+    {
+        FMDatabase * db = [FMDatabase databaseWithPath:self.dbPath];
+        if ([db open])
+        {
+            NSString * RemoveAccountScript = @"delete from AccountSession WHERE ID = ? ";
+            
+            BOOL RemoveAccountScriptResult = [db executeUpdate:RemoveAccountScript,(Index)];
+            if (RemoveAccountScriptResult)
+            {
+                NSLog(@"SUCCESS Remove account session");
+                [db close];
+                return YES;
+            }
+            else
+            {
+                NSLog(@"ERROR Remove account session");
+                [db close];
+                return NO;
+            }
+        }
+        else
+        {
+            NSLog(@"ERROR open database when Remove account session");
+            return NO;
+        }
+    }
+    else
+    {
+        NSLog(@"ERROR find database when Remove account session");
+        return NO;
+    }
+    
+}
 
+- (BOOL)SelfDestroy
+{
+    NSString * doc = PATH_OF_DOCUMENT;
+    NSString * path = [doc stringByAppendingPathComponent:@"user.sqlite"];
+    
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:path] == YES)
+    {
+        NSError *error;
+        BOOL success = [fileManager removeItemAtPath:path error:&error];
+        if (success)
+        {
+            return YES;
+        }
+        else
+        {
+            NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
+            return NO;
+        }
+    }
+    else
+    {
+        NSLog(@"ERROR find database when self destroy");
+        return NO;
+    }
 
-
-
+}
 @end
