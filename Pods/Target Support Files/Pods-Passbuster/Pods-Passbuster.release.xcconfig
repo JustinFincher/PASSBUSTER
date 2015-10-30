@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaSecurity" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/IQKeyboardManager" "${PODS_ROOT}/Headers/Public/JazzHands" "${PODS_ROOT}/Headers/Public/KVNProgress" "${PODS_ROOT}/Headers/Public/MJExtension"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaSecurity" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/IQKeyboardManager" -isystem "${PODS_ROOT}/Headers/Public/JazzHands" -isystem "${PODS_ROOT}/Headers/Public/KVNProgress" -isystem "${PODS_ROOT}/Headers/Public/MJExtension"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CocoaSecurity" -l"FMDB" -l"IQKeyboardManager" -l"JazzHands" -l"KVNProgress" -l"MJExtension" -l"sqlite3" -framework "CoreGraphics" -framework "Foundation" -framework "GLKit" -framework "QuartzCore" -framework "UIKit"
+PODS_ROOT = ${SRCROOT}/Pods
