@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Tabbar-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController storyboardIdentifier="Tabbar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" customClass="Tabbar" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GB0-G9-0EB" kind="relationship" relationship="viewControllers" id="0Nd-nU-oN2"/>
+                        <segue destination="L2z-JR-8BK" kind="relationship" relationship="viewControllers" id="n3G-R0-xSu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--PASSBUSTER-->
+        <scene sceneID="xLI-ij-Oiy">
+            <objects>
+                <tableViewController storyboardIdentifier="PasswordTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VcY-ZY-VeS" customClass="PasswordTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ffP-zs-NuH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PasswordTableViewCell" id="9U3-yj-Yx1" customClass="PasswordTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9U3-yj-Yx1" id="Kc1-0P-wvg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VcY-ZY-VeS" id="d7W-OT-GDy"/>
+                            <outlet property="delegate" destination="VcY-ZY-VeS" id="4eW-XV-92V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PASSBUSTER" id="TCX-im-UWQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEA-gK-pTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="-361"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="JWX-Xy-WJZ">
+            <objects>
+                <tableViewController id="T6Z-PH-2rk" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JH3-f3-vJF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IzF-WF-zWd">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IzF-WF-zWd" id="vd4-Al-oXd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T6Z-PH-2rk" id="6K4-Q5-mif"/>
+                            <outlet property="delegate" destination="T6Z-PH-2rk" id="aLy-7y-4Lw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="sG2-nV-Tgr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgk-uE-VKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="468"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="HeO-ib-cYS">
+            <objects>
+                <navigationController id="L2z-JR-8BK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="MKZ-7a-PNp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S8p-h2-0KZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T6Z-PH-2rk" kind="relationship" relationship="rootViewController" id="TmY-yJ-mkj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTw-EL-8uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="468"/>
+        </scene>
+        <!--Passwords-->
+        <scene sceneID="7v0-eM-qam">
+            <objects>
+                <navigationController storyboardIdentifier="PassViewerNaviController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GB0-G9-0EB" customClass="PassViewerNaviController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Passwords" image="visibility-off" id="fJF-x6-W12"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oib-60-yX4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VcY-ZY-VeS" kind="relationship" relationship="rootViewController" id="bjb-HD-Bwp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVj-yc-Y6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="-361"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="settings" width="20" height="20"/>
+        <image name="visibility-off" width="22" height="20"/>
+    </resources>
+</document>

@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DD986E01BE34DC0002C09B0 /* PassViewerNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986DF1BE34DC0002C09B0 /* PassViewerNaviController.m */; };
+		0DD986E31BE35410002C09B0 /* PasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986E21BE35410002C09B0 /* PasswordTableViewController.m */; };
+		0DD986E71BE35424002C09B0 /* PasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986E51BE35424002C09B0 /* PasswordTableViewCell.m */; };
+		0DD986E81BE35424002C09B0 /* PasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD986E61BE35424002C09B0 /* PasswordTableViewCell.xib */; };
+		0DD986EC1BE362A0002C09B0 /* AddSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986EA1BE362A0002C09B0 /* AddSessionViewController.m */; };
+		0DD986ED1BE362A0002C09B0 /* AddSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD986EB1BE362A0002C09B0 /* AddSessionViewController.xib */; };
 		0DF364811BE2581700E35F4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF364801BE2581700E35F4A /* main.m */; };
 		0DF364841BE2581700E35F4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF364831BE2581700E35F4A /* AppDelegate.m */; };
-		0DF364871BE2581700E35F4A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF364861BE2581700E35F4A /* FirstViewController.m */; };
-		0DF3648A1BE2581700E35F4A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF364891BE2581700E35F4A /* SecondViewController.m */; };
 		0DF3648D1BE2581700E35F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF3648B1BE2581700E35F4A /* Main.storyboard */; };
 		0DF3648F1BE2581700E35F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF3648E1BE2581700E35F4A /* Assets.xcassets */; };
 		0DF364921BE2581700E35F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF364901BE2581700E35F4A /* LaunchScreen.storyboard */; };
@@ -40,14 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DD986DE1BE34DC0002C09B0 /* PassViewerNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassViewerNaviController.h; sourceTree = "<group>"; };
+		0DD986DF1BE34DC0002C09B0 /* PassViewerNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassViewerNaviController.m; sourceTree = "<group>"; };
+		0DD986E11BE35410002C09B0 /* PasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTableViewController.h; sourceTree = "<group>"; };
+		0DD986E21BE35410002C09B0 /* PasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordTableViewController.m; sourceTree = "<group>"; };
+		0DD986E41BE35424002C09B0 /* PasswordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTableViewCell.h; sourceTree = "<group>"; };
+		0DD986E51BE35424002C09B0 /* PasswordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordTableViewCell.m; sourceTree = "<group>"; };
+		0DD986E61BE35424002C09B0 /* PasswordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordTableViewCell.xib; sourceTree = "<group>"; };
+		0DD986E91BE362A0002C09B0 /* AddSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSessionViewController.h; sourceTree = "<group>"; };
+		0DD986EA1BE362A0002C09B0 /* AddSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSessionViewController.m; sourceTree = "<group>"; };
+		0DD986EB1BE362A0002C09B0 /* AddSessionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSessionViewController.xib; sourceTree = "<group>"; };
 		0DF3647C1BE2581700E35F4A /* Passbuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passbuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF364801BE2581700E35F4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DF364821BE2581700E35F4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DF364831BE2581700E35F4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0DF364851BE2581700E35F4A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		0DF364861BE2581700E35F4A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0DF364881BE2581700E35F4A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		0DF364891BE2581700E35F4A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0DF3648C1BE2581700E35F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DF3648E1BE2581700E35F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DF364911BE2581700E35F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,10 +138,16 @@
 				0DF364B61BE25DCC00E35F4A /* FMDBAPI.m */,
 				0DF364B81BE3063800E35F4A /* IntroAnimator.h */,
 				0DF364B91BE3063800E35F4A /* IntroAnimator.m */,
-				0DF364851BE2581700E35F4A /* FirstViewController.h */,
-				0DF364861BE2581700E35F4A /* FirstViewController.m */,
-				0DF364881BE2581700E35F4A /* SecondViewController.h */,
-				0DF364891BE2581700E35F4A /* SecondViewController.m */,
+				0DD986DE1BE34DC0002C09B0 /* PassViewerNaviController.h */,
+				0DD986DF1BE34DC0002C09B0 /* PassViewerNaviController.m */,
+				0DD986E11BE35410002C09B0 /* PasswordTableViewController.h */,
+				0DD986E21BE35410002C09B0 /* PasswordTableViewController.m */,
+				0DD986E91BE362A0002C09B0 /* AddSessionViewController.h */,
+				0DD986EA1BE362A0002C09B0 /* AddSessionViewController.m */,
+				0DD986EB1BE362A0002C09B0 /* AddSessionViewController.xib */,
+				0DD986E41BE35424002C09B0 /* PasswordTableViewCell.h */,
+				0DD986E51BE35424002C09B0 /* PasswordTableViewCell.m */,
+				0DD986E61BE35424002C09B0 /* PasswordTableViewCell.xib */,
 				0DF3648B1BE2581700E35F4A /* Main.storyboard */,
 				0DF3648E1BE2581700E35F4A /* Assets.xcassets */,
 				0DF364901BE2581700E35F4A /* LaunchScreen.storyboard */,
@@ -290,6 +306,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD986E81BE35424002C09B0 /* PasswordTableViewCell.xib in Resources */,
+				0DD986ED1BE362A0002C09B0 /* AddSessionViewController.xib in Resources */,
 				0DF364921BE2581700E35F4A /* LaunchScreen.storyboard in Resources */,
 				0DF3648F1BE2581700E35F4A /* Assets.xcassets in Resources */,
 				0DF3648D1BE2581700E35F4A /* Main.storyboard in Resources */,
@@ -365,13 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF3648A1BE2581700E35F4A /* SecondViewController.m in Sources */,
+				0DD986E71BE35424002C09B0 /* PasswordTableViewCell.m in Sources */,
+				0DD986E01BE34DC0002C09B0 /* PassViewerNaviController.m in Sources */,
 				0DF364B71BE25DCC00E35F4A /* FMDBAPI.m in Sources */,
 				0DF364841BE2581700E35F4A /* AppDelegate.m in Sources */,
 				0DF364BA1BE3063800E35F4A /* IntroAnimator.m in Sources */,
-				0DF364871BE2581700E35F4A /* FirstViewController.m in Sources */,
+				0DD986EC1BE362A0002C09B0 /* AddSessionViewController.m in Sources */,
 				0DF364811BE2581700E35F4A /* main.m in Sources */,
 				0DF364C01BE3119600E35F4A /* Tabbar.m in Sources */,
+				0DD986E31BE35410002C09B0 /* PasswordTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
