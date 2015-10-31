@@ -57,11 +57,32 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [self RemoveCoverImageView];
     
-    MainPasswordInput *NewMainPasswordInput =  [[MainPasswordInput alloc] init];
-    
-    UITabBarController *TabBarController = (UITabBarController *)self.window.rootViewController;
-    [TabBarController.selectedViewController presentViewController:NewMainPasswordInput animated:YES completion:^(void){}];
+    NSString * doc = PATH_OF_DOCUMENT;
+    NSString * path = [doc stringByAppendingPathComponent:@"user.sqlite"];
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:path] == YES)
+    {
+        FMDatabase * db = [FMDatabase databaseWithPath:path];
+        if ([db open])
+        {
+            int isFirstOpen = [db intForQuery:@"SELECT isFirstOpen FROM AppSettings WHERE id = 1"];
+            NSLog(@"isFirstOpen = %d",isFirstOpen);
+            if (isFirstOpen == 1)
+            {
+            }
+            else
+            {
+                NSLog(@"ResignCheck : isFirstOpen = 0");
+                
+                [db close];
+                MainPasswordInput *NewMainPasswordInput =  [[MainPasswordInput alloc] init];
+                
+                UITabBarController *TabBarController = (UITabBarController *)self.window.rootViewController;
+                [TabBarController.selectedViewController presentViewController:NewMainPasswordInput animated:YES completion:^(void){}];
 
+            }
+        }
+    }
     
 }
 
