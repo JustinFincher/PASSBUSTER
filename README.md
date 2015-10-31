@@ -1,5 +1,5 @@
 # PASSBUSTER
-![iTunesArtwork@2x.png](https://github.com/JustinFincher/PASSBUSTER/raw/master/PicForREADME/iTunesArtwork@2x.png)  
+![PASSB.jpg](https://github.com/JustinFincher/PASSBUSTER/raw/master/PicForREADME/PASSB.jpg)  
 
 Password manager done for college work
 #SKETCH FILE
@@ -18,6 +18,10 @@ including icon design.
 ###Self destroy  
 
 ###show login when resign active  
+
+#TODO
+
+###press cell to copy
 
 
 
