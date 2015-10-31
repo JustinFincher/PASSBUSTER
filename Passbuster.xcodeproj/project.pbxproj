@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7FEBCE1BE473BB00A96449 /* MainPasswordInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FEBCC1BE473BB00A96449 /* MainPasswordInput.m */; };
+		0D7FEBCF1BE473BB00A96449 /* MainPasswordInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D7FEBCD1BE473BB00A96449 /* MainPasswordInput.xib */; };
 		0DD986E01BE34DC0002C09B0 /* PassViewerNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986DF1BE34DC0002C09B0 /* PassViewerNaviController.m */; };
 		0DD986E31BE35410002C09B0 /* PasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986E21BE35410002C09B0 /* PasswordTableViewController.m */; };
 		0DD986E71BE35424002C09B0 /* PasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD986E51BE35424002C09B0 /* PasswordTableViewCell.m */; };
@@ -49,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D7FEBCB1BE473BB00A96449 /* MainPasswordInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPasswordInput.h; sourceTree = "<group>"; };
+		0D7FEBCC1BE473BB00A96449 /* MainPasswordInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPasswordInput.m; sourceTree = "<group>"; };
+		0D7FEBCD1BE473BB00A96449 /* MainPasswordInput.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainPasswordInput.xib; sourceTree = "<group>"; };
 		0DD986DE1BE34DC0002C09B0 /* PassViewerNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassViewerNaviController.h; sourceTree = "<group>"; };
 		0DD986DF1BE34DC0002C09B0 /* PassViewerNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassViewerNaviController.m; sourceTree = "<group>"; };
 		0DD986E11BE35410002C09B0 /* PasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTableViewController.h; sourceTree = "<group>"; };
@@ -169,6 +174,9 @@
 			children = (
 				0DF364821BE2581700E35F4A /* AppDelegate.h */,
 				0DF364831BE2581700E35F4A /* AppDelegate.m */,
+				0D7FEBCB1BE473BB00A96449 /* MainPasswordInput.h */,
+				0D7FEBCC1BE473BB00A96449 /* MainPasswordInput.m */,
+				0D7FEBCD1BE473BB00A96449 /* MainPasswordInput.xib */,
 				0DF364BE1BE3119600E35F4A /* Tabbar.h */,
 				0DF364BF1BE3119600E35F4A /* Tabbar.m */,
 				0DF364B51BE25DCC00E35F4A /* FMDBAPI.h */,
@@ -349,6 +357,7 @@
 			files = (
 				0DD986E81BE35424002C09B0 /* PasswordTableViewCell.xib in Resources */,
 				0DD986ED1BE362A0002C09B0 /* AddSessionViewController.xib in Resources */,
+				0D7FEBCF1BE473BB00A96449 /* MainPasswordInput.xib in Resources */,
 				0DF364921BE2581700E35F4A /* LaunchScreen.storyboard in Resources */,
 				0DF3648F1BE2581700E35F4A /* Assets.xcassets in Resources */,
 				0DF3648D1BE2581700E35F4A /* Main.storyboard in Resources */,
@@ -428,6 +437,7 @@
 				0DD986E01BE34DC0002C09B0 /* PassViewerNaviController.m in Sources */,
 				0DD986FD1BE3B599002C09B0 /* SettingsViewerNaviController.m in Sources */,
 				0DF364B71BE25DCC00E35F4A /* FMDBAPI.m in Sources */,
+				0D7FEBCE1BE473BB00A96449 /* MainPasswordInput.m in Sources */,
 				0DF364841BE2581700E35F4A /* AppDelegate.m in Sources */,
 				0DF364BA1BE3063800E35F4A /* IntroAnimator.m in Sources */,
 				0DD986EC1BE362A0002C09B0 /* AddSessionViewController.m in Sources */,
